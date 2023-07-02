@@ -293,13 +293,13 @@ void PegSolitaire::showAbout() {
 }
 
 void PegSolitaire::showStatus(int count) {
-    ui->statusBar->showMessage(QString("Peças remanescentes: %1").arg(count));
+    ui->statusBar->showMessage(QString("Remaining parts: %1").arg(count));
 }
 
 void PegSolitaire::showGameOver() {
     QString msg = m_board->count() == 1 ?
-                    tr("Parabéns, você terminou o jogo") :
-                    tr("Não existem mais jogadas possíveis");
+                    tr("Congratulations, you've finished the game") :
+                    tr("No more moves possible");
 
-    QMessageBox::information(this, tr("Fim do jogo"), msg);
+    QMessageBox::information(this, tr("End of game"), msg);
 }
